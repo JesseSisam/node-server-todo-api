@@ -27,13 +27,12 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp',{
   //   console.log('Unable to fetch User');
   // });
 
-  db.collection('Users').find({location: 'Washington D.C'}).toArray().then((docs) => {
+  db.collection('Users').find({name: 'Matthew'}).toArray().then((docs) => {
     console.log(`User: `);
     console.log(JSON.stringify(docs, undefined, 2));
   }, (err) => {
     console.log('Unable to fetch User');
   });
-
 
   client.close();
 });
